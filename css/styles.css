@@ -369,6 +369,20 @@ a.butn.white:hover,a.butn.white:active{
 .top-bar-info ul{
     margin-bottom:0
 }
+.top-bar-info ul li, 
+.top-bar-info ul li a {
+    color: white !important;
+}
+.top-bar-info ul li a {
+    text-decoration: none;
+}
+.top-bar-info ul li i {
+    color: #ee212b !important;
+}
+.top-bar-info ul li a:hover {
+    color: white !important;
+    text-decoration: underline;
+}
 .top-bar-info li{
     color:#fff;
     list-style-type:none;
@@ -390,7 +404,7 @@ a.butn.white:hover,a.butn.white:active{
 }
 .top-bar-info li i{
     font-size:16px;
-    color:#fff;
+    color:#ee212b;
     margin-right:8px;
     margin-top:0;
     display:inline-block;
@@ -411,9 +425,6 @@ a.butn.white:hover,a.butn.white:active{
 .top-social-icon li:last-child{
     padding-right:0
 }
-.top-social-icon li:last-child a{
-    padding-right:0
-}
 .top-social-icon li a{
     color:#fff;
     line-height:28px;
@@ -422,8 +433,12 @@ a.butn.white:hover,a.butn.white:active{
     font-size:16px;
     padding:0 3px
 }
-.top-social-icon li a:hover{
-    color:rgba(255,255,255,0.65)
+.top-social-icon li a i{
+    color:#fff;
+    font-size:14px
+}
+.top-social-icon li a i:hover{
+    color:#ee212b
 }
 @media screen and (max-width: 767px){
     .top-bar-info{
@@ -463,79 +478,120 @@ a.butn.white:hover,a.butn.white:active{
     }
 }
 @media screen and (max-width: 991px){
-    .navbar-toggler{
-        background:#000
+    /* Ocultar menú por defecto en móvil */
+    #nav {
+        display: none;
     }
-    .navbar-nav>li{
-        margin-left:0
+    
+    /* Estilos del botón hamburguesa */
+    .navbar-toggler {
+        background: rgb(8, 44, 75);
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        position: relative;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0;
+        margin-right: 10px;
+        box-shadow: none;
     }
-    .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        left:-173px
+    
+    /* Eliminar estilos antiguos que causan problemas */
+    .navbar-toggler:before,
+    .navbar-toggler:after {
+        display: none !important;
     }
-    .navbar ul ul li.active>a{
-        color:#4cd7d0
+    
+    /* Líneas de la hamburguesa */
+    .navbar-toggler span,
+    .navbar-toggler span:before,
+    .navbar-toggler span:after {
+        width: 22px;
+        height: 2px;
+        background-color: #fff !important;
+        position: absolute;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        left: 9px;
     }
-}
-.slider-sm-title{
-    position:relative;
-    padding-left:45px
-}
-.slider-sm-title:before{
-    content:"";
-    height:2px;
-    width:30px;
-    background:#ee212b;
-    display:inline-block;
-    vertical-align:middle;
-    position:absolute;
-    left:0;
-    top:10px
-}
-.navbar-nav li.current>a,.navbar-nav>li.active>a{
-    color:#ee212b
-}
-.navbar>ul>li.current>a:after{
-    border-color:transparent #ee212b #ee212b transparent
-}
-.navbar ul ul li.active>a{
-    color:#ee212b
-}
-.white-header-mobile .navbar-nav>li>a{
-    font-size:14px
-}
-@media screen and (min-width: 992px){
-    .transparent-header .navbar-nav>li.current>a,.transparent-header .navbar-nav>li.active>a{
-        color:#fff
+    
+    .navbar-toggler span {
+        top: 19px;
     }
-    .transparent-header.scrollHeader .navbar-nav>li.active>a,.transparent-header.scrollHeader .navbar-nav>li.current>a{
-        color:#ee212b
+    
+    .navbar-toggler span:before {
+        content: '';
+        top: -7px;
     }
-    .transparent-header.scrollHeader .navbar>ul>li.has-sub.current>a:after{
-        border-color:transparent #ee212b #ee212b transparent
+    
+    .navbar-toggler span:after {
+        content: '';
+        bottom: -7px;
     }
-    .white-header-mobile .navbar-nav>li>a{
-        padding:21px 0.2rem
+    
+    /* Animación de hamburguesa a X */
+    .navbar-toggler.menu-opened span {
+        background-color: transparent !important;
     }
-}
-@media screen and (max-width: 991px){
-    .navbar ul ul li.active>a{
-        color:#ee212b
+    
+    .navbar-toggler.menu-opened span:before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    
+    .navbar-toggler.menu-opened span:after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    /* Estilos del menú móvil */
+    .navbar-nav {
+        background: rgb(8, 44, 75);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        border-radius: 0 0 4px 4px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        padding: 0;
+    }
+    
+    #nav li {
+        display: block;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    #nav li:first-child {
+        border-top: none;
+    }
+    
+    #nav li a {
+        padding: 12px 20px;
+        display: block;
+        color: #fff !important;
+    }
+    
+    #nav li a:hover {
+        background: rgba(255,255,255,0.05);
     }
     .navbar-toggler:after{
-        border-top:2px solid #ee212b;
-        border-bottom:2px solid #ee212b
+        border-top:2px solid #fff;
+        border-bottom:2px solid #fff
     }
     .navbar-toggler:before{
-        background:#ee212b
+        background:#fff
     }
     .navbar-toggler.menu-opened:after,.navbar-toggler.menu-opened:before{
-        background:#ee212b
+        background:#fff
     }
     .light-header-mobile{
         background:#edf5ff
     }
     .light-header-mobile .navbar-toggler{
-        background:#ee212b
+        background:#fff
     }
     .light-header-mobile .navbar-toggler:after{
         border-color:#fff
@@ -548,7 +604,7 @@ a.butn.white:hover,a.butn.white:active{
     }
     .white-header-mobile .navbar-toggler{
         top:14px;
-        background:#ee212b
+        background:#fff
     }
     .white-header-mobile .navbar-toggler:after{
         border-color:#fff
@@ -566,7 +622,7 @@ a.butn.white:hover,a.butn.white:active{
         margin-top:8px
     }
     .sm-bg-theme,.sm-bg-theme-solid,.sm-bg-theme-90,.sm-bg-theme-180{
-        background:#ee212b
+        background:#fff
     }
 }
 .page-title-section{
@@ -654,7 +710,7 @@ a.butn.white:hover,a.butn.white:active{
     z-index:1;
     text-align:center;
     text-transform:uppercase;
-    background-color:#ee212b;
+    background-color:#fff;
     color:#fff
 }
 .blog-block .blog-list{
@@ -716,7 +772,7 @@ a.butn.white:hover,a.butn.white:active{
     position:relative;
     padding:35px 35px 35px 130px;
     margin:30px 0;
-    border-left:5px solid #ee212b;
+    border-left:5px solid #fff;
     background:#f7f7f7;
     font-size:14px
 }
@@ -771,7 +827,7 @@ a.butn.white:hover,a.butn.white:active{
     z-index:1;
     text-align:center;
     text-transform:uppercase;
-    background-color:#ee212b;
+    background-color:#fff;
     color:#fff
 }
 .blogs .post .post-img img{
@@ -836,14 +892,14 @@ a.butn.white:hover,a.butn.white:active{
     z-index:1;
     text-align:center;
     text-transform:uppercase;
-    background-color:#ee212b;
+    background-color:#fff;
     color:#fff
 }
 .blog-list-simple-text{
     color:#999999
 }
 .blog-list-simple-text>span{
-    color:#ee212b;
+    color:#fff;
     font-size:13px;
     font-weight:600;
     letter-spacing:1px
@@ -882,7 +938,7 @@ a.butn.white:hover,a.butn.white:active{
     padding:3px 0
 }
 .blog-list-simple-text ul li i{
-    color:#ee212b;
+    color:#fff;
     margin-right:5px;
     font-size:14px
 }
@@ -982,7 +1038,6 @@ a.butn.white:hover,a.butn.white:active{
     line-height:40px;
     text-decoration:none;
     border:1px solid #dbdbdb;
-    border-left-width:0;
     background:#fff
 }
 .pagination a:hover{
@@ -1032,7 +1087,7 @@ a.butn.white:hover,a.butn.white:active{
     content:'';
     width:40px;
     height:2px;
-    background:#ee212b;
+    background:#fff;
     position:absolute;
     bottom:0;
     left:0
@@ -1062,7 +1117,7 @@ a.butn.white:hover,a.butn.white:active{
     left:0;
     font-size:30px;
     line-height:40px;
-    color:#ee212b
+    color:#fff
 }
 .side-bar .widget .social-listing{
     margin-bottom:0
@@ -1083,11 +1138,11 @@ a.butn.white:hover,a.butn.white:active{
     line-height:35px;
     text-align:center;
     font-size:16px;
-    border:1px solid #ee212b;
+    border:1px solid #fff;
     transition:all .3s ease-in-out 0s
 }
 .side-bar .widget .social-listing li a:hover i{
-    background:#ee212b;
+    background:#fff;
     color:#fff
 }
 .side-bar .banner-img-box{
@@ -1176,7 +1231,7 @@ a.butn.white:hover,a.butn.white:active{
     position:relative;
     height:80px;
     width:80px;
-    background:#ee212b;
+    background:#fff;
     text-align:center;
     display:inline-block;
     line-height:85px;
@@ -1376,7 +1431,7 @@ a.butn.white:hover,a.butn.white:active{
     margin-bottom:0
 }
 .service-blocks .numbers{
-    background:#ee212b;
+    background:#fff;
     color:#fff;
     border-radius:50%;
     height:40px;
@@ -1444,7 +1499,7 @@ a.butn.white:hover,a.butn.white:active{
     border-radius:50%
 }
 .social-icon li i:hover{
-    color:#ee212b
+    color:#fff
 }
 .service-block{
     box-shadow:0 7px 35px 0 rgba(0,0,0,0.07);
@@ -1463,7 +1518,7 @@ a.butn.white:hover,a.butn.white:active{
     display:block;
     font-size:64px;
     line-height:100px;
-    color:#ee212b
+    color:#fff
 }
 .service-block .icon:before{
     width:100px;
@@ -1533,7 +1588,7 @@ a.butn.white:hover,a.butn.white:active{
 }
 .service-detail-block .author{
     position:relative;
-    color:#ee212b;
+    color:#fff;
     font-size:15px;
     font-weight:700;
     font-style:normal;
@@ -1561,7 +1616,7 @@ a.butn.white:hover,a.butn.white:active{
     top:0;
     left:0;
     line-height:35px;
-    color:#ee212b
+    color:#fff
 }
 @media screen and (max-width: 1199px){
     .service-detail-block .list-styles li{
@@ -1597,7 +1652,7 @@ a.butn.white:hover,a.butn.white:active{
     content:'';
     width:40px;
     height:2px;
-    background:#ee212b;
+    background:#fff;
     position:absolute;
     bottom:0;
     left:0
@@ -1619,7 +1674,7 @@ a.butn.white:hover,a.butn.white:active{
     left:0;
     font-size:30px;
     line-height:40px;
-    color:#ee212b
+    color:#fff
 }
 .service-side-bar .widget .social-listing{
     margin-bottom:0
@@ -1637,11 +1692,11 @@ a.butn.white:hover,a.butn.white:active{
     line-height:35px;
     text-align:center;
     font-size:16px;
-    border:1px solid #ee212b;
+    border:1px solid #fff;
     transition:all .3s ease-in-out 0s
 }
 .service-side-bar .widget .social-listing li a:hover i{
-    background:#ee212b;
+    background:#fff;
     color:#fff
 }
 .service-side-bar .banner-img-box{
@@ -1762,8 +1817,8 @@ a.butn.white:hover,a.butn.white:active{
 .custom-dot.active span{
     width:12px;
     height:12px;
-    background:#ee212b;
-    border-color:#ee212b;
+    background:#fff;
+    border-color:#fff;
     -webkit-transition-duration:.3s;
     -moz-transition-duration:.3s;
     -o-transition-duration:.3s;
@@ -1775,7 +1830,7 @@ a.butn.white:hover,a.butn.white:active{
     padding-top:6px
 }
 .owl-nav .owl-next{
-    color:#ee212b;
+    color:#fff;
     font-size:43px;
     text-align:center;
     width:40px;
@@ -1783,7 +1838,7 @@ a.butn.white:hover,a.butn.white:active{
     background:#fff !important
 }
 .owl-nav .owl-prev{
-    color:#ee212b;
+    color:#fff;
     font-size:43px;
     text-align:center;
     width:40px;
@@ -1855,7 +1910,7 @@ a.butn.white:hover,a.butn.white:active{
 .portfolio-block .item-icon a{
     height:40px;
     width:40px;
-    background-color:#ee212b;
+    background-color:#fff;
     border-radius:50%;
     display:flex;
     align-items:center;
@@ -1894,7 +1949,7 @@ a.butn.white:hover,a.butn.white:active{
     left:0;
     font-size:18px;
     line-height:40px;
-    color:#ee212b
+    color:#fff
 }
 .project-detail-block .project-list2 li{
     font-size:16px;
@@ -1910,7 +1965,7 @@ a.butn.white:hover,a.butn.white:active{
     top:0;
     left:0;
     line-height:35px;
-    color:#ee212b
+    color:#fff
 }
 @media screen and (max-width: 991px){
     .project-detail-block .project-list li{
@@ -1919,7 +1974,7 @@ a.butn.white:hover,a.butn.white:active{
     }
 }
 .team-block .detail{
-    border-bottom:3px solid #ee212b
+    border-bottom:3px solid #fff
 }
 .team-block .box-overlay:before{
     background:rgba(0,0,0,0.5);
@@ -1965,7 +2020,7 @@ a.butn.white:hover,a.butn.white:active{
     display:block;
     font-size:14px;
     border-radius:50%;
-    color:#ee212b;
+    color:#fff;
     background:#fff;
     transition:all .3s ease-in-out 0s
 }
@@ -1974,7 +2029,7 @@ a.butn.white:hover,a.butn.white:active{
     top:45%
 }
 .team-block .social-icons li a:hover i{
-    background:#ee212b;
+    background:#fff;
     color:#fff
 }
 .team-block .team-img img{
@@ -2048,7 +2103,7 @@ a.butn.white:hover,a.butn.white:active{
     display:inline-block
 }
 .client-block .rating li.star-rate i{
-    color:#ee212b
+    color:#fff
 }
 .client .custom-dot{
     margin-top:0
@@ -2088,28 +2143,28 @@ a.butn.white:hover,a.butn.white:active{
     }
 }
 .search-form_input{
-    color:#ee212b
+    color:#fff
 }
 .search-frame h4 a:hover{
-    color:#ee212b
+    color:#fff
 }
 .search-frame .search_list .match{
-    color:#ee212b
+    color:#fff
 }
 .search-frame .search_list li:before{
-    color:#ee212b
+    color:#fff
 }
 .search-frame .search_list li+li{
-    border-top:3px solid #ee212b
+    border-top:3px solid #fff
 }
 .search-frame .search{
-    color:#ee212b
+    color:#fff
 }
 .counter-block h4{
     font-size:80px
 }
 .counter-block .separator{
-    background:#ee212b;
+    background:#fff;
     height:1px;
     width:100px;
     text-align:center;
@@ -2143,7 +2198,7 @@ a.butn.white:hover,a.butn.white:active{
     font-size:80px
 }
 .Why-Choose .separator{
-    background:#ee212b;
+    background:#fff;
     height:1px;
     width:100px;
     text-align:center;
@@ -2213,7 +2268,7 @@ a.butn.white:hover,a.butn.white:active{
     line-height:30px;
     border-radius:100px;
     text-align:center;
-    background:#ee212b;
+    background:#fff;
     color:#fff;
     font-size:12px;
     margin-right:10px
@@ -2246,8 +2301,8 @@ a.butn.white:hover,a.butn.white:active{
     cursor:pointer;
     padding:15px 20px;
     white-space:normal;
-    background:#ee212b;
-    border:2px solid #ee212b;
+    background:#fff;
+    border:2px solid #fff;
     color:#fff;
     border-bottom:transparent
 }
@@ -2270,24 +2325,24 @@ a.butn.white:hover,a.butn.white:active{
     content:"\f070"
 }
 .accordion-style .btn:not(:disabled):not(.disabled).active,.accordion-style .btn:not(:disabled):not(.disabled):active{
-    background:#ee212b;
+    background:#fff;
     color:#fff;
     border-bottom:transparent
 }
 .accordion-style .btn-link.collapsed .counts{
     background:transparent;
     border:1px solid #cee1f8;
-    color:#ee212b
+    color:#fff
 }
 .accordion-style .btn-link .counts{
     background:#fff;
     border:1px solid #cee1f8;
-    color:#ee212b
+    color:#fff
 }
 .accordion-style .btn:not(:disabled):not(.disabled).active .counts,.accordion-style .btn:not(:disabled):not(.disabled):active .counts{
     background:#fff;
     border:1px solid #cee1f8;
-    color:#ee212b
+    color:#fff
 }
 .accordion-style .card:last-child{
     border-bottom:1px dashed #cee1f8
@@ -2300,7 +2355,7 @@ a.butn.white:hover,a.butn.white:active{
     text-align:left
 }
 .accordion-style .btn:not(:disabled):not(.disabled):active{
-    background:#ee212b
+    background:#fff
 }
 @media screen and (max-width: 991px){
     .accordion-style .card{
@@ -2369,7 +2424,7 @@ a.butn.white:hover,a.butn.white:active{
     color:#000;
     outline:none;
     border-radius:3px;
-    background-color:#ee212b;
+    background:#fff;
     cursor:pointer;
     padding:13px 18px;
     box-shadow:none
@@ -2405,7 +2460,7 @@ footer h3:after{
     display:block;
     width:70px;
     height:2px;
-    background:#ee212b;
+    background:#fff;
     margin:12px auto 0 auto
 }
 footer .email-box{
@@ -2446,10 +2501,10 @@ footer .email-box{
     transition-duration:.3s
 }
 .footer-list li a:hover{
-    color:#ee212b
+    color:#fff
 }
 .footer-list li a:hover:before{
-    color:#ee212b
+    color:#fff
 }
 @media screen and (max-width: 767px){
     .footer-list li a{
@@ -2573,4 +2628,62 @@ footer .email-box{
     padding:13px 18px;
     box-shadow:none
 }
- 
+
+.top-bar-info ul li .fas.fa-phone,
+.top-bar-info ul li .fas.fa-mobile-alt,
+.top-bar-info ul li .far.fa-clock,
+.top-bar-info ul li .fas.fa-envelope,
+.top-bar-info ul li .fas.fa-map {
+    color: #ee212b !important;
+    transition: all 0.3s ease;
+}
+
+.top-bar-info ul li:hover .fas.fa-phone,
+.top-bar-info ul li:hover .fas.fa-mobile-alt,
+.top-bar-info ul li:hover .far.fa-clock,
+.top-bar-info ul li:hover .fas.fa-envelope,
+.top-bar-info ul li:hover .fas.fa-map {
+    color: #ee212b !important;
+}
+
+.fas.fa-phone,
+.ti-mobile,
+.ti-email,
+.ti-location-pin,
+.ti-time {
+    color: #ee212b !important;
+    transition: all 0.3s ease;
+}
+
+a:hover .fas.fa-phone,
+li:hover .ti-mobile,
+a:hover .ti-email,
+li:hover .ti-location-pin,
+a:hover .ti-time {
+    color: #ee212b !important;
+}
+
+/* Estilos para los iconos del footer */
+.footer-style3 i {
+    color: #ee212b !important;
+    transition: all 0.3s ease;
+}
+
+.footer-style3 a:hover i,
+.footer-style3 li:hover i {
+    color: #ee212b !important;
+}
+
+/* SOLO LOS ICONOS ESPECÍFICOS EN ROJO */
+.top-bar-info ul li i.fas.fa-mobile-alt,
+.top-bar-info ul li i.fas.fa-phone,
+.top-bar-info ul li i.fas.fa-envelope,
+.top-bar-info ul li i.fas.fa-map,
+.top-bar-info ul li i.far.fa-clock,
+#top-bar .fas.fa-mobile-alt,
+#top-bar .fas.fa-phone,
+#top-bar .fas.fa-envelope,
+#top-bar .fas.fa-map,
+#top-bar .far.fa-clock {
+    color: #ee212b !important;
+}
