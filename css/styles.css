@@ -24,7 +24,7 @@ html {
 .loader-icon{
     width:80px;
     height:80px;
-    border:5px solid #ee212b;
+    border:5px solid #ff8c00;
     border-right-color:#eee;
     border-radius:50%;
     position:relative;
@@ -40,14 +40,14 @@ html {
     }
 }
 a:hover,a:active{
-    color:#ee212b;
+    color:#ff8c00;
     text-decoration:none
 }
 .bg-theme,.theme-overlay[data-overlay-dark]:before,.theme-overlay-180[data-overlay-dark]:before,.theme-overlay-90[data-overlay-dark]:before,.bg-theme-90,.bg-theme-solid,.theme-overlay-solid[data-overlay-dark]:before{
-    background:#ee212b
+    background:#ff8c00
 }
 .text-theme-color{
-    color:#ee212b
+    color:#ff8c00
 }
 .line-through{
     text-decoration:line-through
@@ -146,9 +146,7 @@ input,textarea,select,.form-input{
     line-height:30px;
     z-index:9999;
     outline:0;
-    -webkit-transition:all .3s ease;
-    -moz-transition:all .3s ease;
-    -o-transition:all 0.3s ease
+    transition:all .3s ease;
 }
 .scroll-to-top i{
     color:#fff
@@ -201,7 +199,7 @@ input,textarea,select,.form-input{
     top:10px;
     width:8px;
     height:8px;
-    background:#ee212b;
+    background:#ff8c00;
     -webkit-border-radius:100px;
     -moz-border-radius:100px;
     -o-border-radius:100px;
@@ -245,7 +243,7 @@ input,textarea,select,.form-input{
     display:block;
     font-size:14px;
     padding:0px;
-    color:#ee212b;
+    color:#ff8c00;
     font-weight:900;
     font-family:"Font Awesome 5 Free"
 }
@@ -260,7 +258,7 @@ input,textarea,select,.form-input{
     }
 }
 .butn{
-    background:#ee212b;
+    background:#ff8c00;
     cursor:pointer;
     font-weight:700;
     color:#fff;
@@ -284,10 +282,10 @@ input,textarea,select,.form-input{
     border:none
 }
 .butn:hover{
-    color:#ee212b
+    color:#ff8c00
 }
 a.butn:hover,a.butn:active{
-    color:#ee212b
+    color:#ff8c00
 }
 .butn:before{
     background:#000;
@@ -325,7 +323,7 @@ a.butn:hover,a.butn:active{
     transform:scaleX(1)
 }
 .butn.white{
-    color:#ee212b;
+    color:#ff8c00;
     background:#ffffff;
     background:-webkit-linear-gradient(-45deg, #e0e0e0, #fff);
     background:-moz-linear-gradient(-45deg, #e0e0e0, #fff);
@@ -333,10 +331,10 @@ a.butn:hover,a.butn:active{
     background:linear-gradient(-45deg, #e0e0e0, #fff)
 }
 .butn.white:hover{
-    color:#ee212b
+    color:#ff8c00
 }
 a.butn.white:hover,a.butn.white:active{
-    color:#ee212b
+    color:#ff8c00
 }
 .butn.white:before{
     background:#fff
@@ -377,7 +375,7 @@ a.butn.white:hover,a.butn.white:active{
     text-decoration: none;
 }
 .top-bar-info ul li i {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
 }
 .top-bar-info ul li a:hover {
     color: white !important;
@@ -404,7 +402,7 @@ a.butn.white:hover,a.butn.white:active{
 }
 .top-bar-info li i{
     font-size:16px;
-    color:#ee212b;
+    color:#ff8c00;
     margin-right:8px;
     margin-top:0;
     display:inline-block;
@@ -438,7 +436,7 @@ a.butn.white:hover,a.butn.white:active{
     font-size:14px
 }
 .top-social-icon li a i:hover{
-    color:#ee212b
+    color:#ff8c00
 }
 @media screen and (max-width: 767px){
     .top-bar-info{
@@ -2299,7 +2297,7 @@ a.butn.white:hover,a.butn.white:active{
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: #ee212b;
+    background-color: #ff8c00;
     transition: width 0.25s ease-in-out;
     z-index: 1;
 }
@@ -2316,7 +2314,7 @@ a.butn.white:hover,a.butn.white:active{
     right: 0;
     height: 0%;
     width: 2px;
-    background-color: #ee212b;
+    background-color: #ff8c00;
     transition: height 0.25s ease-in-out 0.25s;
     z-index: 1;
 }
@@ -2332,7 +2330,7 @@ a.butn.white:hover,a.butn.white:active{
     right: 0;
     width: 0%;
     height: 2px;
-    background-color: #ee212b;
+    background-color: #ff8c00;
     transition: width 0.25s ease-in-out 0.5s;
     z-index: 1;
 }
@@ -2348,7 +2346,7 @@ a.butn.white:hover,a.butn.white:active{
     left: 0;
     height: 0%;
     width: 2px;
-    background-color: #ee212b;
+    background-color: #ff8c00;
     transition: height 0.25s ease-in-out 0.75s;
     z-index: 1;
 }
@@ -2370,8 +2368,8 @@ a.butn.white:hover,a.butn.white:active{
     padding:15px 20px;
     white-space:normal;
     background:#fff;
-    border:2px solid #ee212b;
-    color:#ee212b;
+    border:2px solid #ff8c00;
+    color:#ff8c00;
     border-bottom:transparent
 }
 .accordion-style .btn-link:before{
@@ -2400,7 +2398,7 @@ a.butn.white:hover,a.butn.white:active{
 }
 .accordion-style .btn:not(:disabled):not(.disabled).active,.accordion-style .btn:not(:disabled):not(.disabled):active{
     background:#fff;
-    color:#ee212b;
+    color:#ff8c00;
     border-bottom:transparent
 }
 .accordion-style .btn-link.collapsed .counts{
@@ -2429,9 +2427,9 @@ a.butn.white:hover,a.butn.white:active{
     text-align:left;
     background-color: #f9f9f9;
     color: #333;
-    border-left: 2px solid #ee212b;
-    border-right: 2px solid #ee212b;
-    border-bottom: 2px solid #ee212b;
+    border-left: 2px solid #ff8c00;
+    border-right: 2px solid #ff8c00;
+    border-bottom: 2px solid #ff8c00;
     margin-top: -2px;
     line-height: 1.6
 }
@@ -2715,7 +2713,7 @@ footer .email-box{
 .top-bar-info ul li .far.fa-clock,
 .top-bar-info ul li .fas.fa-envelope,
 .top-bar-info ul li .fas.fa-map {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
     transition: all 0.3s ease;
 }
 
@@ -2724,7 +2722,7 @@ footer .email-box{
 .top-bar-info ul li:hover .far.fa-clock,
 .top-bar-info ul li:hover .fas.fa-envelope,
 .top-bar-info ul li:hover .fas.fa-map {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
 }
 
 .fas.fa-phone,
@@ -2732,7 +2730,7 @@ footer .email-box{
 .ti-email,
 .ti-location-pin,
 .ti-time {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
     transition: all 0.3s ease;
 }
 
@@ -2741,18 +2739,18 @@ li:hover .ti-mobile,
 a:hover .ti-email,
 li:hover .ti-location-pin,
 a:hover .ti-time {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
 }
 
 /* Estilos para los iconos del footer */
 .footer-style3 i {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
     transition: all 0.3s ease;
 }
 
 .footer-style3 a:hover i,
 .footer-style3 li:hover i {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
 }
 
 /* SOLO LOS ICONOS ESPECÍFICOS EN ROJO */
@@ -2766,5 +2764,5 @@ a:hover .ti-time {
 #top-bar .fas.fa-envelope,
 #top-bar .fas.fa-map,
 #top-bar .far.fa-clock {
-    color: #ee212b !important;
+    color: #ff8c00 !important;
 }
