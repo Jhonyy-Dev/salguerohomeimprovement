@@ -2257,7 +2257,8 @@ a.butn.white:hover,a.butn.white:active{
     box-shadow:none;
     margin-top:0 !important;
     border:none !important;
-    margin-bottom:15px
+    margin-bottom:20px;
+    transition: all 0.3s ease
 }
 .accordion-style .card .counts{
     display:inline-block;
@@ -2286,7 +2287,74 @@ a.butn.white:hover,a.butn.white:active{
     border:0px;
     padding:0;
     transition:all 0.3s ease 0s;
-    background:#fff
+    background:#fff;
+    margin-bottom: 0;
+    position: relative
+}
+
+.accordion-style .card-header:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ee212b;
+    transition: width 0.25s ease-in-out;
+    z-index: 1;
+}
+
+.accordion-style .card-header:hover:after{
+    width: 100%;
+}
+
+/* Bordes laterales */
+.accordion-style .card-header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0%;
+    width: 2px;
+    background-color: #ee212b;
+    transition: height 0.25s ease-in-out 0.25s;
+    z-index: 1;
+}
+
+.accordion-style .card-header:hover:before{
+    height: 100%;
+}
+
+/* Borde inferior */
+.accordion-style .card-header .bottom-border{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ee212b;
+    transition: width 0.25s ease-in-out 0.5s;
+    z-index: 1;
+}
+
+.accordion-style .card-header:hover .bottom-border{
+    width: 100%;
+}
+
+/* Borde izquierdo */
+.accordion-style .card-header .left-border{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0%;
+    width: 2px;
+    background-color: #ee212b;
+    transition: height 0.25s ease-in-out 0.75s;
+    z-index: 1;
+}
+
+.accordion-style .card-header:hover .left-border{
+    height: 100%;
 }
 .accordion-style .btn-link{
     position:relative;
@@ -2302,8 +2370,8 @@ a.butn.white:hover,a.butn.white:active{
     padding:15px 20px;
     white-space:normal;
     background:#fff;
-    border:2px solid #fff;
-    color:#fff;
+    border:2px solid #ee212b;
+    color:#ee212b;
     border-bottom:transparent
 }
 .accordion-style .btn-link:before{
@@ -2319,14 +2387,20 @@ a.butn.white:hover,a.butn.white:active{
     box-shadow:none;
     background:none;
     color:#6f6f6f;
-    border:2px solid #efecec
+    border:2px solid #efecec;
+    position: relative;
+    overflow: visible;
+}
+
+.accordion-style .btn-link.collapsed:hover{
+    box-shadow: 0 0 10px rgba(238, 33, 43, 0.3);
 }
 .accordion-style .btn-link.collapsed:before{
     content:"\f070"
 }
 .accordion-style .btn:not(:disabled):not(.disabled).active,.accordion-style .btn:not(:disabled):not(.disabled):active{
     background:#fff;
-    color:#fff;
+    color:#ee212b;
     border-bottom:transparent
 }
 .accordion-style .btn-link.collapsed .counts{
@@ -2351,8 +2425,15 @@ a.butn.white:hover,a.butn.white:active{
     border-bottom:transparent
 }
 .accordion-style .card-body{
-    padding:20px 30px 10px;
-    text-align:left
+    padding:20px 30px 20px;
+    text-align:left;
+    background-color: #f9f9f9;
+    color: #333;
+    border-left: 2px solid #ee212b;
+    border-right: 2px solid #ee212b;
+    border-bottom: 2px solid #ee212b;
+    margin-top: -2px;
+    line-height: 1.6
 }
 .accordion-style .btn:not(:disabled):not(.disabled):active{
     background:#fff
@@ -2382,7 +2463,7 @@ a.butn.white:hover,a.butn.white:active{
         padding:12px 15px
     }
     .accordion-style .card-body{
-        padding:20px 20px 10px
+        padding:20px 20px 20px
     }
 }
 @media screen and (max-width: 575px){
@@ -2391,7 +2472,7 @@ a.butn.white:hover,a.butn.white:active{
         right:16px
     }
     .accordion-style .card-body{
-        padding:10px 15px 10px
+        padding:15px 15px 15px
     }
 }
 .newsletter{

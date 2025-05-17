@@ -1,0 +1,297 @@
+/* Dark Theme CSS for Salguero Home Improvement */
+
+/* General dark background and text colors */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Preloader background */
+#preloader {
+    background: #121212;
+}
+
+/* Sections with light backgrounds */
+section:not(.footer-style3), 
+.bg-very-light-gray, 
+.bg-light-gray {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0;
+}
+
+/* Card and block backgrounds */
+.service-block02, 
+.why-choose, 
+.portfolio-block {
+    background-color: #252525 !important;
+}
+
+/* Service block content area */
+.service-block02 .padding-25px-all {
+    background-color: #252525;
+}
+
+/* Text colors */
+h1, h2, h3, h4, h5, h6, p, 
+.text-black, 
+.service-block02 h5 a.text-black, 
+.service-block02 a.text-black {
+    color: #e0e0e0 !important;
+}
+
+/* Links in dark mode */
+a:not(.butn):not(.navbar-brand):not(.text-white) {
+    color: #e0e0e0;
+}
+
+a:hover:not(.butn):not(.navbar-brand):not(.text-white) {
+    color: #ff8c00;
+}
+
+/* Preserve orange accent color */
+.text-theme-color {
+    color: #ff8c00 !important;
+}
+
+/* Borders and separators */
+.border, .border-bottom, .border-top, .border-left, .border-right {
+    border-color: #333333 !important;
+}
+
+/* Input fields */
+input, textarea, select, .form-control {
+    background-color: #333333;
+    color: #e0e0e0;
+    border-color: #444444;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999999;
+}
+
+/* Service blocks */
+.service-blocks {
+    background-color: transparent;
+}
+
+/* Numbers in service blocks */
+.numbers span {
+    color: #ff8c00;
+}
+
+/* Portfolio items */
+.portfolio-block .item-img {
+    background-color: #252525;
+}
+
+/* Preserve white text on colored backgrounds */
+.text-white {
+    color: #ffffff !important;
+}
+
+/* Preserve the blue header and footer */
+header, .footer-style3-bottom {
+    /* Mantener el estilo original - no modificar */
+    background-color: #082c4b;
+}
+
+/* Buttons hover state */
+.butn:hover {
+    color: #ff8c00 !important;
+}
+
+/* Card hover effects */
+.service-block02:hover {
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
+}
+
+/* Testimonials and quotes */
+blockquote, .testimonial {
+    background-color: #252525;
+    border-left-color: #ff8c00;
+}
+
+/* Icons */
+.ti-user, .ti-thumb-up, .ti-world, .ti-target, 
+.ti-arrow-right, .ti-plus {
+    color: #ff8c00 !important;
+}
+
+/* Counters and stats */
+.counter-box {
+    background-color: #252525;
+}
+
+/* Preserve the original color for the orange numbers */
+.numbers span[style*="color: orange"] {
+    color: #ff8c00 !important;
+}
+
+/* Fix for image backgrounds to ensure proper contrast */
+[data-background], .bg-img {
+    background-color: #121212;
+}
+
+/* Estilos adicionales para el tema oscuro */
+.main-wrapper {
+    background-color: #121212;
+}
+
+/* Ajustes para el about-us y gutter services section */
+#about-us, .bg-light-gray {
+    background-color: #1e1e1e !important;
+}
+
+/* Ajustes para las tarjetas de servicios */
+.service-block02 {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.service-block02:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+}
+
+/* Ajustes para la sección de proyectos */
+.portfolio-block {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes para la sección de contador */
+.grey-bg {
+    background-color: #1a1a1a !important;
+}
+
+/* Ajustes para los iconos en el tema oscuro */
+.ti-user, .ti-thumb-up, .ti-world, .ti-target {
+    color: #ff8c00 !important;
+}
+
+/* Ajustes para los números en naranja */
+.numbers span[style="color: orange;"] {
+    color: #ff8c00 !important;
+}
+
+/* Ajustes para las imágenes para que no se vean demasiado brillantes */
+img:not(.rev-slidebg) {
+    filter: brightness(0.9);
+}
+
+/* Excluir las imágenes del logo del filtro de brillo */
+.navbar-brand img {
+    filter: none;
+}
+
+/* Ajustes para el fondo de la barra de navegación en modo móvil */
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        background: #082c4b !important;
+    }
+}
+
+/* Ajustes para los botones en tema oscuro */
+.butn {
+    background: #ff8c00;
+    color: #fff;
+}
+
+.butn:before {
+    background: #000;
+}
+
+/* Ajustes para las secciones Why Choose Us y Our Services */
+.margin-50px-bottom.xs-margin-30px-bottom.text-center h3,
+.margin-50px-bottom.xs-margin-30px-bottom.text-center h4 {
+    color: #e0e0e0 !important;
+}
+
+/* Ajustes para el scroll-to-top */
+.scroll-to-top {
+    background: #ff8c00;
+    border-color: #ff8c00;
+}
+
+.scroll-to-top:hover {
+    background: #000;
+    color: #ff8c00;
+}
+
+.scroll-to-top:hover i {
+    color: #ff8c00 !important;
+}
+
+/* Ajustes para el preloader */
+.loader-icon {
+    border: 5px solid #ff8c00;
+    border-right-color: #333;
+}
+
+/* Overlay adjustments for dark theme (excepto el banner) */
+[data-overlay-dark]:before {
+    opacity: 0.7;
+}
+
+/* Ensure proper contrast for portfolio item content */
+.portfolio-block .item-content {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Adjust box shadows for dark theme */
+.box-shadow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para la sección de proyectos */
+#projects {
+    background-color: #1e1e1e !important;
+}
+
+/* Ajustes para las tarjetas de proyectos */
+.portfolio-block .item-content {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ajustes para los iconos en los bloques de servicio */
+.service-block02 .ti-arrow-right {
+    color: #ff8c00 !important;
+}
+
+/* Ajustes para los enlaces en el footer */
+.footer-style3 a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-style3 a:hover {
+    color: #ff8c00;
+}
+
+/* Ajustes para los elementos de formulario */
+input, textarea, select, .form-control {
+    background-color: #252525;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+input:focus, textarea:focus, select:focus, .form-control:focus {
+    background-color: #333;
+    color: #fff;
+    border-color: #ff8c00;
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+/* Ajustes para el menú móvil */
+.navbar-toggler {
+    background: #ff8c00;
+}
+
+/* Ajustes para las secciones con fondo gris */
+.bg-very-light-gray, .grey-bg {
+    background-color: #1a1a1a !important;
+}
+
+/* Ajustes para el hover de los elementos de servicio */
+.service-blocks:hover {
+    background-color: #252525;
+    transition: all 0.3s ease;
+}

@@ -202,7 +202,7 @@ website:   	http://www.themepunch.com
 	text-shadow:none;
 }
 
-.tp-caption.modern_big_redbg,.modern_big_redbg
+.tp-caption.modern_big_orangebg,.modern_big_orangebg
 {
 	background-color:#de543e;
 	border-style:none;
@@ -451,7 +451,7 @@ website:   	http://www.themepunch.com
 	text-decoration:none;
 }
 
-.tp-caption.medium_bold_red,.medium_bold_red
+.tp-caption.medium_bold_orange,.medium_bold_orange
 {
 	background-color:transparent;
 	border-color:#ffd658;
@@ -466,7 +466,7 @@ website:   	http://www.themepunch.com
 	text-decoration:none;
 }
 
-.tp-caption.medium_light_red,.medium_light_red
+.tp-caption.medium_light_orange,.medium_light_orange
 {
 	background-color:transparent;
 	border-color:#ffd658;
@@ -481,7 +481,7 @@ website:   	http://www.themepunch.com
 	text-decoration:none;
 }
 
-.tp-caption.medium_bg_red,.medium_bg_red
+.tp-caption.medium_bg_orange,.medium_bg_orange
 {
 	background-color:#e33a0c;
 	border-color:#ffd658;
@@ -2117,7 +2117,7 @@ website:   	http://www.themepunch.com
 	text-decoration:none;
 }
 
-.tp-caption.Sports-Button-Red,.Sports-Button-Red
+.tp-caption.Sports-Button-Orange,.Sports-Button-Orange
 {
 	background-color:rgba(219,28,34,1.00);
 	border-color:rgba(219,28,34,0);
@@ -2136,7 +2136,7 @@ website:   	http://www.themepunch.com
 	text-decoration:none;
 }
 
-.tp-caption.Sports-Button-Red:hover,.Sports-Button-Red:hover
+.tp-caption.Sports-Button-Orange:hover,.Sports-Button-Orange:hover
 {
 	background-color:rgba(0,0,0,1.00);
 	border-color:rgba(0,0,0,1.00);
@@ -3430,8 +3430,8 @@ website:   	http://www.themepunch.com
         text-shadow: none;
         text-align: left
     }
-    .tp-caption.RedDot,
-    .RedDot {
+    .tp-caption.OrangeDot,
+    .OrangeDot {
         color: rgba(0, 0, 0, 1.00);        
         font-weight: 400;
         font-style: normal;        
@@ -3444,8 +3444,8 @@ website:   	http://www.themepunch.com
         border-width: 5px;
         border-radius: 50px 50px 50px 50px
     }
-    .tp-caption.RedDot:hover,
-    .RedDot:hover {
+    .tp-caption.OrangeDot:hover,
+    .OrangeDot:hover {
         color: rgba(0, 0, 0, 1.00);
         text-decoration: none;
         background-color: rgba(255, 255, 255, 0.75);
